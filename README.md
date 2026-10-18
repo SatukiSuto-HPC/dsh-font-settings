@@ -26,10 +26,10 @@ DeepSeek Harness の Web/デスクトップ GUI で**表示フォントを変更
 
 ## インストール
 
-npm（公開名：`@satukisuto-hpc/dsh-font-settings`）:
+npm（公開名：`@satuki_suto/dsh-font-settings`）:
 
 ```
-dsh plugin install @satukisuto-hpc/dsh-font-settings
+dsh plugin install @satuki_suto/dsh-font-settings
 ```
 
 または GitHub（https://github.com/SatukiSuto-HPC/dsh-font-settings）を clone して、
@@ -53,6 +53,6 @@ to other presets (Meiryo UI, biz UDP Gothic, Yu Gothic UI, Yu Gothic, Hiragino, 
 Segoe UI, or a custom CSS font-family value) from **Settings → Fonts**. Changes apply live and
 are saved as entry config.
 
-Install: `dsh plugin install @satukisuto-hpc/dsh-font-settings`
+Install: `dsh plugin install @satuki_suto/dsh-font-settings`
 
 License: MIT
