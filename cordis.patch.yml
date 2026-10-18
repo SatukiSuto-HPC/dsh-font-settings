@@ -1,0 +1,7 @@
+# dsh-font-settings — GUI font settings for DeepSeek Harness.
+# Inserts this plugin's roster row; the browser half applies the chosen font
+# stacks through the --dsw-font-family (UI) and --ds-font-family-code (code)
+# CSS variables. The choice persists in this entry's config (default: Meiryo).
+- insert:
+    - id: font-settings
+      name: dsh-font-settings
