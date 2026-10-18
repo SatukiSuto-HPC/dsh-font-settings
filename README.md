@@ -35,6 +35,12 @@ dsh plugin install @satuki_suto/dsh-font-settings
 または GitHub（https://github.com/SatukiSuto-HPC/dsh-font-settings）を clone して、
 `dsh plugin install <このフォルダ>` でローカルインストールできます。
 
+npm 不要の共有経路として、[GitHub Releases](https://github.com/SatukiSuto-HPC/dsh-font-settings/releases) の tarball をダウンロードして:
+
+```
+dsh plugin install ./satuki_suto-dsh-font-settings-0.1.0.tgz
+```
+
 プロファイル（例：`~/.dsh/profiles/desktop/`）に本バンドルを入れ、
 `cordis.patch.yml` の行（`id: font-settings`）がロースターに入っていることを確認してください。
 
