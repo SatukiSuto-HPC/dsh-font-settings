@@ -1,6 +1,6 @@
 {
   "name": "@satuki_suto/dsh-font-settings",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "DSH Web GUI フォント設定プラグイン: changes the GUI display fonts from the settings page. Overrides --dsw-font-family (UI) and --ds-font-family-code (code) with user-picked font stacks; ships Meiryo (メイリオ) as the default so Japanese text renders with Japanese glyph shapes instead of the Chinese-fallback defaults.",
   "type": "module",
   "main": "lib/index.js",
