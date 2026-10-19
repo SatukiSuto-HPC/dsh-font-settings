@@ -45,7 +45,7 @@ dsh plugin install @satuki_suto/dsh-font-settings
 npm 不要の共有経路として、[GitHub Releases](https://github.com/SatukiSuto-HPC/dsh-font-settings/releases) の tarball をダウンロードして:
 
 ```
-dsh plugin install ./satuki_suto-dsh-font-settings-0.2.1.tgz
+dsh plugin install ./satuki_suto-dsh-font-settings-0.2.2.tgz
 ```
 
 プロファイル（例：`~/.dsh/profiles/desktop/`）に本バンドルを入れ、
