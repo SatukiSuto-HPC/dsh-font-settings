@@ -18,6 +18,8 @@ jobs:
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
+      # npm >= 11 does not read NODE_AUTH_TOKEN on its own; write the token
+      # into an npmrc the CLI actually uses.
+      - name: Configure registry auth
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

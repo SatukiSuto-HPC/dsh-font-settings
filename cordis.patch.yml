@@ -1,7 +1,10 @@
 # dsh-font-settings — GUI font settings for DeepSeek Harness.
-# Inserts this plugin's roster row; the browser half applies the chosen font
-# stacks through the --dsw-font-family (UI) and --ds-font-family-code (code)
-# CSS variables. The choice persists in this entry's config (default: Meiryo).
+# Inserts this plugin's roster row; `name` must equal the package name so the
+# host resolves the plugin module from the profile's node_modules under any
+# install method. The browser half applies the chosen font stacks through the
+# --dsw-font-family (UI) and --ds-font-family-code (code) CSS variables and
+# persists the choice in the browser's localStorage — this plugin has no
+# config row and no npm dependencies: it is fully self-contained.
 - insert:
     - id: font-settings
-      name: dsh-font-settings
+      name: '@satuki_suto/dsh-font-settings'
