@@ -18,9 +18,16 @@ jobs:
         with:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
-      # setup-node points NPM_CONFIG_USERCONFIG at its own temp npmrc, so the
-      # token must be written THERE (npm >= 11 ignores bare NODE_AUTH_TOKEN,
-      # and ~/.npmrc is bypassed while NPM_CONFIG_USERCONFIG is set).
-      - name: Configure registry auth
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> "$NPM_CONFIG_USERCONFIG"
+      # Standard recipe: setup-node writes //registry.npmjs.org/:_authToken
+      # into the temp npmrc it points NPM_CONFIG_USERCONFIG at, but ONLY when
+      # NODE_AUTH_TOKEN is visible to the setup-node step itself.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # Masked sanity check of the generated npmrc (never prints the token).
+      - name: Verify registry auth (masked)
+        run: sed 's/_authToken=.*/_authToken=<set>/' "$NPM_CONFIG_USERCONFIG"
       - run: npm publish --access public
